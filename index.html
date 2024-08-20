@@ -1,0 +1,27 @@
+<html>
+<head>
+  <title>Hello World</title>
+</head>
+<body>
+ 
+<p>Введите имя: </p> <input id="first_name">
+<button id="say">Отправить</button>
+ 
+<hr>
+<div id="result"></div>
+ 
+<script>
+function say_hi() {
+    var fname = document.getElementById('first_name').value;
+ 
+    var html = 'Привет, ' + fname + '!' ;
+ 
+    document.getElementById('result').innerHTML = html;
+}
+ 
+document.getElementById('say').addEventListener('click', say_hi);
+</script>
+ 
+</body>
+</html>
+ 
