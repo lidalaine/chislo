@@ -11,21 +11,20 @@
 <div id="result"></div>
  
 <script>
-  var arr = [];
+var arr = [];
 
 function say_hi() {
-    var fname = document.getElementById('first_name').value;
-    
-  
- if (arr.length == 0) {
-  var html = '<b>Привет, ' + fname + '!</b> お元気ですか？';
- }
- else {
+  var fname = document.getElementById('first_name').value;
+
+  if (arr.length == 0) {
+    var html = '<b>Привет, ' + fname + '!</b> お元気ですか？';
+  }
+  else {
     var html = '<b>Привет, ' + arr.join(', ') + ' и ' + fname + '!</b>  お元気ですか？';
- }
-  
-    arr.push(fname);
-    document.getElementById('result').innerHTML = html;
+  }
+
+  arr.push(fname);
+  document.getElementById('result').innerHTML = html;
 
 }
  
