@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyMy</title>
+</head>
+<body>
+    <h2>Загадай число</h2>
+    <form>
+        <input id="one">
+        <button type="button" onclick="myFunction()">Сравнить</button>
+      </form>
+      <p id="demo">Ответ</p>
+      <p id="arrPrint">История</p>
+    <div style="border: 0px solid" onclick="Again()">
+        <input type="button" value="Новая игра" style="display: block; margin: 0 auto; ">
+      </div>
+      
+      <script>
+        let b = Math.floor(Math.random() * 100) + 1;
+        function myFunction() {
+  var a;
+  let arr = [1, 2, 3];
+  a = parseFloat(document.getElementById("one").value);
+
+    if (a > b) {
+    return document.getElementById("demo").innerHTML = 'Ваше число больше';
+    arr.push(a);
+    }
+   else if (a < b) {
+    return document.getElementById("demo").innerHTML = 'Ваше число меньше';
+    arr.push(a);
+    }
+    else {
+      return document.getElementById("demo").innerHTML = 'Победа!'; 
+      document.getElementById("arrPrint").textContent = arr.join(", ");
+    }
+}
+myFunction();
+      </script>
+   
+</body>
+</html>
