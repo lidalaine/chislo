@@ -6,6 +6,7 @@
  
 <p>Введите имя: </p> <input id="first_name">
 <button id="say">Отправить</button>
+<button id="new">Сбросить</button>
  
 <hr>
 <div id="result"></div>
@@ -27,10 +28,16 @@ function say_hi() {
   document.getElementById('result').innerHTML = html;
 
 }
+
+function new_function() {
+  document.getElementById('result').innerHTML = '';
+  arr = [];
+}
  
 document.getElementById('say').addEventListener('click', say_hi);
+document.getElementById('new').addEventListener('click', new_function);
 </script>
-<button onClick="window.location.reload();">Сбросить</button>
+
 </body>
 </html>
  
